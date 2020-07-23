@@ -4,13 +4,15 @@ import './form-input.styles.scss'
 
 const FormInput = ({ handleChange, label, ...otherProps }) => (
       <div className="group">
-            <input className="form-input" onChange={handleChange} {...otherProps} />
+            <input className='form-input' onChange={handleChange} {...otherProps} />
             {
                   //Si le pasamos el parametro label lo renderiza, si no no.
                   label ?
-                        <label className={`${otherProps.value.lenght ? 'shrink' : ''} form-input-label`} >
+                        (<label className={`${
+                              otherProps.value.length ? 'shrink' : ''
+                              } form-input-label`} >
                               {label}
-                        </label>
+                        </label>)
                         : null
 
             }
